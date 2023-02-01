@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="container m-5 px-5">
+        <h1> <strong>LoginForm</strong></h1>
+        <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8 mt-5">
+                    <form action="" [formGroup]="LoginForm" (ngSubmit)="authenticate()">
+                
+                        <div class="mb-3">
+                            <input type="text" placeholder="Enter the Username" formControlName="username">
+                            <div class="form-text text-danger" *ngIf="username?.touched && username?.invalid">Invalid username</div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" placeholder="Enter the Password" formControlName="password">
+                            <div class="form-text text-danger" *ngIf="password?.touched && password?.invalid">Invalid password</div>
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-info" [disabled]="LoginForm.invalid">Login</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-2"></div>
+            
+        </div>
+    </div>
+</body>
+</html>

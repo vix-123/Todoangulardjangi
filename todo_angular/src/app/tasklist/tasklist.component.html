@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <div class="card" style="width: 18rem;">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item" *ngFor="let t of alltask">{{t.task_name}} {{t.status}} {{t.date}} {{t.date}}
+                    <a class="btn text-danger" (click)="deleteTask(t.id)" >Delete</a>
+                </li>
+                  
+                </ul>
+            </div>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
